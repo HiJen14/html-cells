@@ -1,10 +1,16 @@
 # Html cells system
 
- New system to align site elements with cells.
- Because grithub pages uses Jeklly
+Jekyll website by cell principle.
 
+ New system to align site elements with cells, removing the need of CSS padding and margin.
+ And at the same time adding functionaly that is harder to achieve with padding and margin.
+ Because grithub pages uses Jeklly this system is showcased using 
+ Jeklly.
 
+# TO DO
 
- # Licence
+ ## Licence
  
- Not yet added. ## To Do
+ Not yet added: 
+ 
+ - To Do, add licence
