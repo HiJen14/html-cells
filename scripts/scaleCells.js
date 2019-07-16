@@ -8,7 +8,7 @@
         //console.log(cellID.outerHTML);
     };
 
-function OnScaling(var totalMainCells) 
+function OnScaling(totalMainCells) 
 {
     for (var i = 1; i <= totalMainCells; i++) 
     {
