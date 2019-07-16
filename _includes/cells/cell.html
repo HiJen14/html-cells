@@ -1,4 +1,4 @@
-{% for i in (1..4) %}
+{% for i in (1..site.totalMainCells) %}
  {{ i }}
 		{%  assign cellCounter = cellCounter | plus: 1 %}
 		<div id="cell{{ cellCounter }}">
