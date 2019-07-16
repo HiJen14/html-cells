@@ -12,6 +12,7 @@ function OnScaling(totalMainCells)
 {
     for (var i = 1; i <= totalMainCells; i++) 
     {
-        document.getElementById("cell" + i).style.width = "300px";
+        console.log("cell" + i.toString());
+        document.getElementById("cell" + i.toString()).style.width = "300px";
     }
 }
