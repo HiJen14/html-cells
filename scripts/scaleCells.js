@@ -1,14 +1,6 @@
 /*Script to rock the cells. Or scale them!*/
 /******************************************/
 
-function OnScaling(var totalMainCells) 
-{
-    for (i = 1; i <= totalMainCells; i++) 
-    {
-        document.getElementById("cell" + i).style.width = "300px";
-    }
-}
-
     window.onload = function myFunction()
     {
     
@@ -16,4 +8,10 @@ function OnScaling(var totalMainCells)
         //console.log(cellID.outerHTML);
     };
 
-
+function OnScaling(var totalMainCells) 
+{
+    for (var i = 1; i <= totalMainCells; i++) 
+    {
+        document.getElementById("cell" + i).style.width = "300px";
+    }
+}
