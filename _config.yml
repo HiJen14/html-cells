@@ -5,7 +5,7 @@ description: New system to align site elements with cells.
 baseurl: "https://hiJen14.github.io/html-cells"
 
 #site - global/static var for cells
-totalMainCells = 5
+totalMainCells: 5
 
 #Build settings
 markdown: kramdown
