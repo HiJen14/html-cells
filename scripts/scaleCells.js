@@ -1,12 +1,11 @@
 /*Script to rock the cells. Or scale them!*/
 /******************************************/
 
-    window.onload = function myFunction()
+    /*window.onload = function myFunction()
     {
-    
-        //var cellID = document.getElementById("cell1");
-        //console.log(cellID.outerHTML);
-    };
+        var cellID = document.getElementById("cell1");
+        console.log(cellID.outerHTML);
+    };*/
 
 function OnScaling(totalMainCells) 
 {
