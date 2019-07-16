@@ -9,12 +9,14 @@
 
 function OnScaling(totalMainCells) 
 {
+    var percentageOfElement = 100 / totalMainCells;
+    
     console.log("Yuuuuuuuuuuuuuuuuuuuuuuuuupp");
     console.log(totalMainCells);
     var i;
     for (i = 1; i <= totalMainCells; i++) 
     {
         console.log("cell" + i.toString());
-        document.getElementById("cell" + i.toString()).style.width = "300px";
+        document.getElementById("cell" + i.toString()).style.width =  percentageOfElement.toString() + "%";
     }
 }
