@@ -6,8 +6,8 @@ baseurl: "https://hiJen14.github.io/cells"
 
 #Collections for cells and the rows the cells are in
 collections:
-	- cells
-	- rows
+- cells
+- rows
 
 cellsCounter: 0
 
