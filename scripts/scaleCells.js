@@ -1,12 +1,8 @@
 //Function to rock the cells. Or scale them!
 window.onload = function myFunction()
 {
-    var cellID = document.getElementById("cell1");
-    console.log(cellID.outerHTML);
+    document.getElementById("cell1").style.width = "300px";
     
-    
-    //var name = prompt("What's your name?");
-    //var lengthOfName = name.length
-
-   // document.getElementById('output').innerHTML = lengthOfName;
+    //var cellID = document.getElementById("cell1");
+    //console.log(cellID.outerHTML);
 };
