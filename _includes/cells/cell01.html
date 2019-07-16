@@ -1,5 +1,7 @@
 <div>
 	<p>{{ site.cellsCounter | plus: 1 }}<p>
+	
+	{% site.cellsCounter += 1 %} 
 	<p>{{ site.cellsCounter | plus: 1 }}<p>
 	<p>{{ page.cellCounter | plus: 1 }}<p>
 	<p>{{ page.cellCounter | plus: 1 }}<p>
