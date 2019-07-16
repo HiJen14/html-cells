@@ -1,8 +1,11 @@
 //Function to rock the cells. Or scale them!
-window.onload = function myFunction()
+for (i = 1; i <= {{ site.totalMainCells }}; i++) 
 {
-    document.getElementById("cell1").style.width = "300px";
+    window.onload = function myFunction()
+    {
+        document.getElementById("cell" + i).style.width = "300px";
     
-    //var cellID = document.getElementById("cell1");
-    //console.log(cellID.outerHTML);
-};
+        //var cellID = document.getElementById("cell1");
+        //console.log(cellID.outerHTML);
+    };
+}
