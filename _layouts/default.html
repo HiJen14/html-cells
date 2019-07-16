@@ -35,10 +35,7 @@
     <header>
       <div id="inner-header">
 	      
-	  <!--{% for cells in site.cells %}
-  		<p>{{ cells.content }}</p>
-	  {% endfor %}-->
-	      {{ includes cells/cell01.html }}
+	      {{ include cells/cell01.html }}
 	      
 	Page Title: {{ page.title }} <br>
 	        Page URL test: {{ page.url }}
