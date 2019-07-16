@@ -1,33 +1,5 @@
 <div>
-	{%  assign site.cellsCounter = site.cellsCounter | plus: 1 %}
 	{%  assign cellCounter = cellCounter | plus: 1 %}
-	{%  assign page.cellCounte = page.cellCounte | plus: 1 %}
 	
-	<p>site.cellsCounter {{ site.cellsCounter }}<p>
 	<p>cellCounter {{ cellCounter }}<p>
-	<p>page.cellCounter {{ page.cellCounter | plus: 1 }}<p>
-	
-	---
-	
-	{%  assign site.cellsCounter = site.cellsCounter | plus: 1 %}
-	{%  assign cellCounter = cellCounter | plus: 1 %}
-	{%  assign page.cellCounte = page.cellCounte | plus: 1 %}
-	
-	<p>site.cellsCounter {{ site.cellsCounter }}<p>
-	<p>cellCounter {{ cellCounter }}<p>
-	<p>page.cellCounter {{ page.cellCounter | plus: 1 }}<p>
-	
-	---
-	
-	{%  assign site.cellsCounter = site.cellsCounter | plus: 1 %}
-	{%  assign cellCounter = cellCounter | plus: 1 %}
-	{%  assign page.cellCounte = page.cellCounte | plus: 1 %}
-	
-	<p>site.cellsCounter {{ site.cellsCounter }}<p>
-	<p>cellCounter {{ cellCounter }}<p>
-	<p>page.cellCounter {{ page.cellCounter | plus: 1 }}<p>
-	
-	{% increment site.cellsCounter %}
-	
-	<p>site.cellsCounter {{ site.cellsCounter }}<p>
 </div>
