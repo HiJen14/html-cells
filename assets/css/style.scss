@@ -36,7 +36,8 @@
 #row1
 {
   width: 100%;
-  overflow: visible;
+  white-space: pre-wrap;
+  word-break: break-all;
 }
 
 html, body 
