@@ -39,6 +39,15 @@
     word-wrap: break-word;
 }
 
+p
+{
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+    color: #000;
+}
+
 html, body 
 {
   margin: 0px;
@@ -55,15 +64,6 @@ body
     font-family: Helvetica, Verdana, Arial, serif;
     color: #000;
     background-color: #eeeeee;
-}
-
-p
-{
-    margin-top: 3px;
-    margin-bottom: 3px;
-    margin-left: 0;
-    margin-right: 0;
-    color: #000;
 }
 
 hr
