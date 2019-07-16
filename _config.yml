@@ -9,6 +9,8 @@ collections:
 	- cells
 	- rows
 
+cellsCounter: 0
+
 #Build settings
 markdown: kramdown
 permalink: pretty
