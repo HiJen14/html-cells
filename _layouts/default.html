@@ -34,7 +34,9 @@
   <body>
     <header>
       <div id="inner-header">
-	  {{ include cell01.html }}
+	  {% for cells in site.cells %}
+  		<p>{{ cells.content }}</p>
+	  {% endfor %}
 	Page Title: {{ page.title }} <br>
 	        Page URL test: {{ page.url }}
         <a href="{{ '/' | absolute_url }}">
