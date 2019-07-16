@@ -1,5 +1,5 @@
 <div>
-	{% increment site.cellsCounter %}
+	{%  assign site.cellsCounter = site.cellsCounter | plus: 1 %}
 	{% increment cellCounter %}
 	
 		<p>{{ cellCounter }}<p>
