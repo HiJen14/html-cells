@@ -1,4 +1,3 @@
-<script type="application/javascript">
 //Function to rock the cells. Or scale them!
 window.onload = function myFunction()
 {
@@ -11,5 +10,3 @@ window.onload = function myFunction()
 
    // document.getElementById('output').innerHTML = lengthOfName;
 };
-
-</script>
