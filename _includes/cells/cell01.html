@@ -26,4 +26,8 @@
 	<p>site.cellsCounter {{ site.cellsCounter }}<p>
 	<p>cellCounter {{ cellCounter }}<p>
 	<p>page.cellCounter {{ page.cellCounter | plus: 1 }}<p>
+	
+	{% increment site.cellsCounter %}
+	
+	<p>site.cellsCounter {{ site.cellsCounter }}<p>
 </div>
