@@ -4,7 +4,7 @@ title:  Html cells system
 description: New system to align site elements with cells.
 baseurl: "https://hiJen14.github.io/html-cells"
 
-//site var for cells
+#site - global/static var for cells
 cellsCounter: 0
 
 #Build settings
