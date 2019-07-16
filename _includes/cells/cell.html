@@ -3,8 +3,7 @@
 		{%  assign cellCounter = cellCounter | plus: 1 %}
 		<div id="cell{{ cellCounter }}">
 			<p>cellCounter {{ cellCounter }}<p>
-			{% capture dataFilenName %}cellsData/{{i}}.html{% endcapture %}
-			{{dataFilenName}}
 
+			{% include cellsData/dataSystem.html %}
 		</div>
 {% endfor %}
