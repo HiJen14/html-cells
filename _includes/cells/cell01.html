@@ -1,8 +1,9 @@
 <div>
 	{% site.cellsCounter  | plus: 1  %}
-	<p>{{ site.cellsCounter }}<p>
 	
-	{% site.cellsCounter += 1 %} 
+	{% cellCounter | plus: 1 } 
+	<p>{{ site.cellsCounter }}<p>
+		<p>{{ cellCounter }}<p>
 	
 	<p>{{ site.cellsCounter | plus: 1 }}<p>
 	<p>{{ page.cellCounter | plus: 1 }}<p>
