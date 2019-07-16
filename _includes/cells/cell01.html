@@ -1,13 +1,17 @@
 <div>
 	{%  assign site.cellsCounter = site.cellsCounter | plus: 1 %}
-	{% increment cellCounter %}
+	{%  assign cellCounter = cellCounter | plus: 1 %}
+	{%  assign page.cellCounte = page.cellCounte | plus: 1 %}
 	
-		<p>{{ cellCounter }}<p>
-
 	<p>{{ site.cellsCounter }}<p>
+	<p>{{ cellCounter }}<p>
+	<p>{{ page.cellCounter | plus: 1 }}<p>
 	
-	<p>{{ site.cellsCounter | plus: 1 }}<p>
-	<p>{{ page.cellCounter | plus: 1 }}<p>
-	<p>{{ page.cellCounter | plus: 1 }}<p>
+	{%  assign site.cellsCounter = site.cellsCounter | plus: 1 %}
+	{%  assign cellCounter = cellCounter | plus: 1 %}
+	{%  assign page.cellCounte = page.cellCounte | plus: 1 %}
+	
+	<p>{{ site.cellsCounter }}<p>
+	<p>{{ cellCounter }}<p>
 	<p>{{ page.cellCounter | plus: 1 }}<p>
 </div>
