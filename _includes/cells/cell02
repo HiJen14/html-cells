@@ -1,0 +1,3 @@
+<div>
+	<p>{{ site.cellsCounter | plus: 1 }}<p>
+</div>
