@@ -17,7 +17,7 @@ function InitializeCells(totalMainCells, cellsOnRow)
         cellData[i] = new Array(totalMainCells);
     }*/
     
-    var percentageOfElement = 100 / totalMainCells;
+    var percentageOfElement = 100 / cellsOnRow;
     
     var biggestHeight = 0; 
     //look at all cells in a "row". 
