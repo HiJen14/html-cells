@@ -35,7 +35,9 @@ function InitializeCells(totalMainCells, cellsOnRow)
     for (i = 1; i <= cellsOnRow; i++) 
     {
         var element = document.getElementById("cell" + i.toString());
-                 console.log(elementHeight);
+                 console.log(element);
+        console.log(element.style.width);
+        console.log( element.style.height);
         element.style.width =  percentageOfElement.toString() + "%";
         element.style.height = biggestHeight.toString();
     }
