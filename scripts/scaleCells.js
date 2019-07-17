@@ -19,7 +19,7 @@ function InitializeCells(totalMainCells, cellsOnRow)
     
     var percentageOfElement = 100 / totalMainCells;
     
-    var biggestHeight; = 0; 
+    var biggestHeight = 0; 
     //look at all cells in a "row". 
     //A row isn't defined by <div>, but by cellsOnRow
     for (var i = 1; i <= cellsOnRow; i++) 
