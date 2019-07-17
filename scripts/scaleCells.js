@@ -19,7 +19,7 @@ function InitializeCells(totalMainCells, cellsOnRow)
     
     var percentageOfElement = 100 / totalMainCells;
     
-    var biggestHeight = 0; 
+    var biggestHeight; = 0; 
     //look at all cells in a "row". 
     //A row isn't defined by <div>, but by cellsOnRow
     for (var i = 1; i <= cellsOnRow; i++) 
@@ -31,8 +31,10 @@ function InitializeCells(totalMainCells, cellsOnRow)
         }
     }
     
-    for (var i = 1; i <= totalMainCells; i++) 
+    for (var i = 1; i <= cellsOnRow; i++) 
     {
-        document.getElementById("cell" + i.toString()).style.width =  percentageOfElement.toString() + "%";
+        var element = document.getElementById("cell" + i.toString());
+        element.style.width =  percentageOfElement.toString() + "%";
+        element.style.height = biggestHeight;
     }
 }
