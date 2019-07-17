@@ -41,7 +41,7 @@
 
   	<script type="text/javascript">
 		{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig == empty %}
+			{% if cellConfig %}
 			    var myVar;
 			{% else %}
 		            var myVar = {{ cellConfig.width | json }};
