@@ -1,9 +1,7 @@
 ---
 ---
 
-//@import "{{ site.theme }}";
-
-#cell1 
+/*#cell1 
 {
     background-color: red;
     float: left;
@@ -37,6 +35,13 @@
 {
     width: 100%;
     word-wrap: break-word;
+}*/
+
+.cell
+{
+    background-color: green;
+    float: left;
+    border: 2px solid black;
 }
 
 p
@@ -60,7 +65,6 @@ body
 {
     font-size: 15px;
     font-weight: 400;
-    line-height: 1.5;
     font-family: Helvetica, Verdana, Arial, serif;
     color: #000;
     background-color: #eeeeee;
