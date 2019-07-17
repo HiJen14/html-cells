@@ -76,10 +76,10 @@ cells:
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
 	  {% include cells/cell.html %}
 	  
-	  {% for cell in page.cells %}
-		{{ cell[0].width }} <br>
-	  	{{ cell[1].height }} <br>
-	  	{{ cell[2].lockedHeight }} <br>
+	  {% for item in page.cells %}
+		{{ item[1].width }} <br>
+	  	{{ item[1].height }} <br>
+	  	{{ item[1].lockedHeight }} <br>
 	  {% endfor %}
 	  
 	  
