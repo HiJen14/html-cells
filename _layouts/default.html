@@ -32,7 +32,7 @@
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
 	  {% include cells/cell.html %}
 	  
-	  {% for item in site.cells%}
+	  {% for item in page.cells %}
 		key: {{cell[0]}}<br>
 	  {% endfor %}
 	  
