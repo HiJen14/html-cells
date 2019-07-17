@@ -44,7 +44,7 @@
 			{% for cellConfig in site.data.cells.ConfigureCells %}
 			{% if cellConfig == ""}
 				undefined,
-			{% else}
+			{% else %}
 				{{ cellConfig.width }},
 			{% endif %}
 				{% if forloop.last == true %}
