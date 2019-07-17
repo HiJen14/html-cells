@@ -9,7 +9,7 @@
 
 //var cellData = new Array(3);
 
-function InitializeCells(totalMainCells, cellsOnRow) 
+function InitializeCells(totalMainCells, cellsOnRow, cellsWidth) 
 {
     //Initialise array in array
     /*for (var i = 0; i < cellData.length; i++) 
