@@ -34,7 +34,7 @@
    {% for cell_hash in site.data.cells %}
      {% assign configCell = cell_hash[1] %}
             com/
-            {{ configCell.cells.name }}
+            {{ configCell.cells[0] }}
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
