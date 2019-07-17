@@ -80,6 +80,8 @@ cells:
 	        {{ item }} 
 	  {% endfor %}
 	  
+	  {{ page.cells[0]['cell01'].width }}
+	  
 	  
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
   </body>
