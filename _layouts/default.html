@@ -77,7 +77,7 @@ cells:
 	  {% include cells/cell.html %}
 	  
 	  {% for item in page.cells %}
-	        <li>{{ item.name }}, width: {{ item.width }}, height: {{ item.height }}</li>
+	        <li>{{ item.name }}, width: {{ item.width }}, height: {{ item.height }}</li> {{ item.lockedHeight }}
 	  {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
