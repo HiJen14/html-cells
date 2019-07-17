@@ -41,8 +41,8 @@ cells:
      width: ""
      height: "5px"
      lockedHeight: 1
- 
 ---
+
 {% assign cellCounter = 0 %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
@@ -77,6 +77,7 @@ cells:
 	  {% include cells/cell.html %}
 	  
 	  {% for item in page.cells %}
+	        {{ item }} 
 		{{ item[1].width }} <br>
 	  	{{ item[1].height }} <br>
 	  	{{ item[1].lockedHeight }} <br>
