@@ -30,15 +30,11 @@
   </head>
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
 	  {% include cells/cell.html %}
-	  
-	  {% for item in page.cells %}
-	        <li>{{ item.name }}, width: {{ item.width }}, height: {{ item.height }}</li> {{ item.lockedHeight }}
-	  {% endfor %}
-
-
+	 
    {% for cell_hash in site.data.cells %}
      {% assign configCell = cell_hash[1] %}
             com/
+            {{ configCell.cells | size }}
             {{ configCell.cells.width }}
           {% endfor %}
 	    
