@@ -31,6 +31,10 @@
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
 	  {% include cells/cell.html %}
 	  
+	  {% for item in site.cells%}
+		key: {{cell[0]}}<br>
+	  {% endfor %}
+	  
 	  
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
   </body>
