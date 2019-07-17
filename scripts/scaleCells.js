@@ -9,13 +9,42 @@
 
 //var cellData = new Array(3);
 
-function InitializeCells(totalMainCells, cellsOnRow, cellsWidth) 
+function InitializeCells(totalMainCells, cellsOnRow) 
 {
     //Initialise array in array
     /*for (var i = 0; i < cellData.length; i++) 
     {
         cellData[i] = new Array(totalMainCells);
     }*/
+    
+    
+    
+    		{% for cellConfig in site.data.cells.ConfigureCells %}
+			{% if cellConfig %}
+			    var myVar;
+			{% else %}
+		            var myVar = {{ cellConfig.width | json }};
+			{% endif %}			
+			Console.log(myVar) ;
+		{% endfor %}
+		
+      		/*var cellsWidth = [
+			{% for cellConfig in site.data.cells.ConfigureCells %}
+			{% if cellConfig == empty %}
+			    {{ "", }}
+			{% else %}
+				{{ cellConfig.width }},
+			{% endif %}
+				{% if forloop.last == true %}
+  					{% if cellConfig %}
+						""
+					{% else %}
+						{{ cellConfig.width }}
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+		];*/
+    
     
     var percentageOfElement = 100 / cellsOnRow;
     
