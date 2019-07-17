@@ -43,12 +43,16 @@
       		var cellsWidth = [
 			{% for cellConfig in site.data.cells.ConfigureCells %}
 			{% if cellConfig == ""}
-				undefined,
+				"",
 			{% else %}
 				{{ cellConfig.width }},
 			{% endif %}
 				{% if forloop.last == true %}
-  					{{ cellConfig.width }}
+  					{% if cellConfig == ""}
+						""
+					{% else %}
+						{{ cellConfig.width }}
+					{% endif %}
 				{% endif %}
 			{% endfor %}
 		];
