@@ -83,7 +83,7 @@ cells:
 
    {% for org_hash in site.data.cells %}
    {% assign org = org_hash[1] %}
-            {{ org.cells | size }}
+            ({{ org.cells | size }} members)
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
