@@ -42,13 +42,13 @@
   	<script type="text/javascript">
       		var cellsWidth = [
 			{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig == empty}
+			{% if cellConfig == ''}
 				{{ cellConfig.width }},
 			{% else %}
 				{{ cellConfig.width }},
 			{% endif %}
 				{% if forloop.last == true %}
-  					{% if cellConfig == empty}
+  					{% if cellConfig == ''}
 						{{ "" }}
 					{% else %}
 						{{ cellConfig.width }}
