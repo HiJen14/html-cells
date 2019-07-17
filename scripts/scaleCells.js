@@ -25,17 +25,18 @@ function InitializeCells(totalMainCells, cellsOnRow)
     for (var i = 1; i <= cellsOnRow; i++) 
     {
         var elementHeight = document.getElementById("cell" + i.toString()).clientHeight;
+         console.log(elementHeight);
         if(elementHeight > biggestHeight)
         {
             biggestHeight = elementHeight;
         }
     }
     
-    for (var i = 1; i <= cellsOnRow; i++) 
+    for (i = 1; i <= cellsOnRow; i++) 
     {
-        document.getElementById("cell" + i.toString()).style.width =  percentageOfElement.toString() + "%";
-        document.getElementById("cell" + i.toString()).style.width =  biggestHeight.toString();
-        //element.style.width =  percentageOfElement.toString() + "%";
-        //element.style.height = biggestHeight.toString();
+        var element = document.getElementById("cell" + i.toString());
+                 console.log(elementHeight);
+        element.style.width =  percentageOfElement.toString() + "%";
+        element.style.height = biggestHeight.toString();
     }
 }
