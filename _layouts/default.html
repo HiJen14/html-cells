@@ -77,9 +77,9 @@ cells:
 	  {% include cells/cell.html %}
 	  
 	  {% for cell in page.cells %}
-		{{ cell.width }} <br>
-	  	{{ cell.height }} <br>
-	  	{{ cell.lockedHeight }} <br>
+		{{ cell[0].width }} <br>
+	  	{{ cell[1].height }} <br>
+	  	{{ cell[2].lockedHeight }} <br>
 	  {% endfor %}
 	  
 	  
