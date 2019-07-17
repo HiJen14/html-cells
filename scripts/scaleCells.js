@@ -7,15 +7,32 @@
         console.log(cellID.outerHTML);
     };*/
 
-function OnScaling(totalMainCells) 
+var cellData = new Array(3);
+
+function InitializeCells(totalMainCells, cellsOnRow) 
 {
+    //Initialise array in array
+    for (var i = 0; i < cellData.length; i++) 
+    {
+        cellData[i] = new Array(totalMainCells);
+    }
+    
     var percentageOfElement = 100 / totalMainCells;
     
-    //console.log("Is Message shown");
-    //console.log(totalMainCells);
+    var biggestHeight = 0; 
+    //look at all cells in a "row". 
+    //A row isn't defined by <div>, but by cellsOnRow
+    for (var i = 1; i <= cellsOnRow; i++) 
+    {
+        var elementHeight = document.getElementById("cell" + i.toString()).clientHeight;
+        if(elementHeight > biggestHeight)
+        {
+            biggestHeight = elementHeight;
+        }
+    }
+    
     for (var i = 1; i <= totalMainCells; i++) 
     {
-        //console.log("cell" + i.toString());
         document.getElementById("cell" + i.toString()).style.width =  percentageOfElement.toString() + "%";
     }
 }
