@@ -7,15 +7,15 @@
         console.log(cellID.outerHTML);
     };*/
 
-var cellData = new Array(3);
+//var cellData = new Array(3);
 
 function InitializeCells(totalMainCells, cellsOnRow) 
 {
     //Initialise array in array
-    for (var i = 0; i < cellData.length; i++) 
+    /*for (var i = 0; i < cellData.length; i++) 
     {
         cellData[i] = new Array(totalMainCells);
-    }
+    }*/
     
     var percentageOfElement = 100 / totalMainCells;
     
