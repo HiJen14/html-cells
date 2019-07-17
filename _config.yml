@@ -4,8 +4,9 @@ title:  Html cells system
 description: New system to align site elements with cells.
 baseurl: "https://hiJen14.github.io/html-cells"
 
-#site - global/static var for cells
-totalMainCells: 5
+#site - variablen for properties cells on a page.
+totalMainCells: 10
+cellsOnRow: 5
 
 #Build settings
 markdown: kramdown
