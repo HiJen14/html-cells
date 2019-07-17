@@ -17,35 +17,6 @@ function InitializeCells(totalMainCells, cellsOnRow)
         cellData[i] = new Array(totalMainCells);
     }*/
     
-    
-    
-    		{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig %}
-			    var myVar;
-			{% else %}
-		            var myVar = {{ cellConfig.width | json }};
-			{% endif %}			
-			Console.log(myVar) ;
-		{% endfor %}
-		
-      		/*var cellsWidth = [
-			{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig == empty %}
-			    {{ "", }}
-			{% else %}
-				{{ cellConfig.width }},
-			{% endif %}
-				{% if forloop.last == true %}
-  					{% if cellConfig %}
-						""
-					{% else %}
-						{{ cellConfig.width }}
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-		];*/
-    
-    
     var percentageOfElement = 100 / cellsOnRow;
     
     var biggestHeight = 0; 
