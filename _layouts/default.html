@@ -34,7 +34,7 @@
    {% for cell_hash in site.data.cells %}
      {% assign configCell = cell_hash[1] %}
             com/
-            {{ configCell.cells | size }}
+            {{ configCell.cells }}
             {{ configCell.cells.width }}
           {% endfor %}
 	    
