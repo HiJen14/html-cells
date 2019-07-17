@@ -37,36 +37,6 @@
             {{ cellConfig.height }} <br>
             {{ cellConfig.lockedHeight }}
           {% endfor %}
-	    
-
-  	<script type="text/javascript">
-		{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig %}
-			    var myVar;
-			{% else %}
-		            var myVar = {{ cellConfig.width | json }};
-			{% endif %}			
-			Console.log(myVar) ;
-		{% endfor %}
-		
-      		/*var cellsWidth = [
-			{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig == empty %}
-			    {{ "", }}
-			{% else %}
-				{{ cellConfig.width }},
-			{% endif %}
-				{% if forloop.last == true %}
-  					{% if cellConfig %}
-						""
-					{% else %}
-						{{ cellConfig.width }}
-					{% endif %}
-				{% endif %}
-			{% endfor %}
-		];*/
-  	</script>
-
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
   </body>
 </html>
