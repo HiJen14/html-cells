@@ -28,11 +28,6 @@
 			</script>
 
   </head>
- {% for cellConfig in site.data.cells.ConfigureCells %}
-  <script type="text/javascript">
-      var cellsWidth = [{{ cellConfig.width }},];
-  </script>
- {% endfor %}
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, $cellsWidth )">
 	  {% include cells/cell.html %}
 	 
@@ -43,6 +38,11 @@
             {{ cellConfig.lockedHeight }}
           {% endfor %}
 	    
+{% for cellConfig in site.data.cells.ConfigureCells %}
+  	<script type="text/javascript">
+      		var cellsWidth = [{{ cellConfig.width }},];
+  	</script>
+ {% endfor %}
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
   </body>
 </html>
