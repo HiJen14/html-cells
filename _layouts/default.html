@@ -34,7 +34,9 @@
 	  {% include cells/cell.html %}
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}
-            {{ cellConfig.width }}
+            {{ cellConfig.name }} <br>
+            {{ cellConfig.width }} <br>
+            {{ cellConfig.height }} <br>
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
