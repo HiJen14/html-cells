@@ -45,7 +45,7 @@
 			{% else %}
 		            var myVar{{forloop.index}} = {{ cellConfig.width | json }};
 			{% endif %}			
-			Console.log(myVar) ;
+			Console.log(myVar{{forloop.index}}) ;
 		{% endfor %}
 		
       		/*var cellsWidth = [
