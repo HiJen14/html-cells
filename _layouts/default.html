@@ -1,46 +1,46 @@
 ---
-#collection
+#jeklly Object with info about
 cells:
-  - cell01:
-    width: ""
+	- name: cell01
+		width: ""
+		height: ""
+		lockedHeight: 0
+	- name: cell02
+		width: ""
+		height: ""
+		lockedHeight: 0
+  - name: cell03:
+		width: ""
+		height: ""
+		lockedHeight: 0
+	- name: cell04
+		width: ""
     height: ""
     lockedHeight: 0
-  - cell02:
+	- name: cell05
     width: ""
     height: ""
-     lockedHeight: 0
-   - cell03:
+		lockedHeight: 0
+	- name: cell06
+  	width: ""
+		height: "5px"
+		lockedHeight: 1
+	- name: cell07
+		width: ""
+    height: "5px"
+    lockedHeight: 1
+	- name: cell08
+		width: ""
+    height: "5px"
+    lockedHeight: 1
+	- name: cell09
     width: ""
-    height: ""
-     lockedHeight: 0
-   - cell04:
+    height: "5px"
+    lockedHeight: 1
+	- name: cell10
     width: ""
-    height: ""
-     lockedHeight: 0
-   - cell05:
-    width: ""
-    height: ""
-     lockedHeight: 0
-   - cell06:
-     width: ""
-     height: "5px"
-     lockedHeight: 1
-   - cell07:
-     width: ""
-     height: "5px"
-     lockedHeight: 1
-   - cell08:
-     width: ""
-     height: "5px"
-     lockedHeight: 1
-   - cell09:
-     width: ""
-     height: "5px"
-     lockedHeight: 1
-   - cell10:
-     width: ""
-     height: "5px"
-     lockedHeight: 1
+    height: "5px"
+    lockedHeight: 1
 ---
 
 {% assign cellCounter = 0 %}
@@ -77,12 +77,9 @@ cells:
 	  {% include cells/cell.html %}
 	  
 	  {% for item in page.cells %}
-	        {{ item }} 
+	        <li>{{ item.name }}, width: {{ item.width }}, height: {{ item.height }}</li>
 	  {% endfor %}
-	  
-	  {{ page.cells[0]['cell01'].width }}
-	  
-	  
+	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
   </body>
 </html>
