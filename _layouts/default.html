@@ -28,12 +28,13 @@
 			</script>
 
   </head>
-  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
+
+
+  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, var cellWidth = []  );">
 	  {% include cells/cell.html %}
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}
-            com/
-            {{ cellConfig.name }}
+            {{ cellConfig.width }}
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
