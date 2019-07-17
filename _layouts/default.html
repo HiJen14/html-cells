@@ -33,7 +33,7 @@
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}
             com/
-            {{ cellConfig.cells }}
+            {{ cellConfig.name }}
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
