@@ -38,8 +38,8 @@
 
    {% for cell_hash in site.data.cells %}
      {% assign configCell = cell_hash[1] %}
-            com/{{ configCell.username }}
-            {{ configCell.cells }}
+            com/
+            {{ configCell.cells.width }}
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
