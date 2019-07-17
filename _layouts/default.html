@@ -31,10 +31,9 @@
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
 	  {% include cells/cell.html %}
 	 
-   {% for cell_hash in site.data.cells %}
-     {% assign configCell = cell_hash[1] %}
+   {% for cellConfig in site.data.cells.ConfigureCells %}
             com/
-            {{ configCell.cells[’width’] }}
+            {{ cellConfig.cells }}
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
