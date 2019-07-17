@@ -1,52 +1,52 @@
 #jeklly Object with info about
 
 cells:
-  - name: cell01
+    name: cell01
     width: ""
     height: ""
     lockedHeight: 0
 
-  - name: cell02
+    name: cell02
     width: ""
     height: ""
     lockedHeight: 0
 
-  - name: cell03
+    name: cell03
     width: ""
     height: ""
     lockedHeight: 0
 
-  - name: cell04
+    name: cell04
     width: ""
     height: ""
     lockedHeight: 0
 
-  - name: cell05
+    name: cell05
     width: ""
     height: ""
     lockedHeight: 0
 
-  - name: cell06
+    name: cell06
     width: ""
     height: "5px"
     lockedHeight: 1
 
-  - name: cell07
+    name: cell07
     width: ""
     height: "5px"
     lockedHeight: 1
 
-  - name: cell08
+    name: cell08
     width: ""
     height: "5px"
     lockedHeight: 1
 
-  - name: cell09
+    name: cell09
     width: ""
     height: "5px"
     lockedHeight: 1
 
-  - name: cell10
+    name: cell10
     width: ""
     height: "5px"
     lockedHeight: 1
