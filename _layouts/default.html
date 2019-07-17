@@ -30,7 +30,7 @@
   </head>
 
 
-  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, var cellWidth = []  );">
+  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}  );">
 	  {% include cells/cell.html %}
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}
