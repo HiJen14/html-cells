@@ -1,3 +1,4 @@
+{% include configure.html %}
 {% assign cellCounter = 0 %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
@@ -28,7 +29,6 @@
 			</script>
 
   </head>
-	{% include configure.html %}
   <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} );">
 	  {% include cells/cell.html %}
 	  
