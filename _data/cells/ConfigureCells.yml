@@ -1,6 +1,5 @@
 #jeklly Object with info about
 
-cells:
   - name: cell01
     width: ""
     height: ""
