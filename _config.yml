@@ -11,45 +11,9 @@ cellsOnRow: 5
 #collection
 cells:
   cell1:
-    width:
-    height:
+    width: ""
+    height: ""
     lockedHeight: 0
-  cell2: 
-     width:
-     height:
-     lockedHeight: 0
-   cell3:
-     width:
-     height:
-     lockedHeight: 0
-   cell4: 
-     width:
-     height:
-     lockedHeight: 0
-   cell5:
-     width:
-     height:
-     lockedHeight: 0
-   cell6:
-     width: 
-     height: "5px"
-     lockedHeight: 1
-   cell7: 
-     width:
-     height: "5px"
-     lockedHeight: 1
-   cell8:
-     width:
-     height: "5px"
-     lockedHeight: 1
-   cell9: 
-     width:
-     height:
-     lockedHeight: 1
-   cell10:
-     width:
-     height: "5px"
-     lockedHeight: 1
 
 #Build settings
 markdown: kramdown
