@@ -1,48 +1,3 @@
----
-#jeklly Object with info about
-cells:
-	- name: cell01
-		width: ""
-		height: ""
-		lockedHeight: 0
-	- name: cell02
-		width: ""
-		height: ""
-		lockedHeight: 0
-  - name: cell03:
-		width: ""
-		height: ""
-		lockedHeight: 0
-	- name: cell04
-		width: ""
-    height: ""
-    lockedHeight: 0
-	- name: cell05
-    width: ""
-    height: ""
-		lockedHeight: 0
-	- name: cell06
-  	width: ""
-		height: "5px"
-		lockedHeight: 1
-	- name: cell07
-		width: ""
-    height: "5px"
-    lockedHeight: 1
-	- name: cell08
-		width: ""
-    height: "5px"
-    lockedHeight: 1
-	- name: cell09
-    width: ""
-    height: "5px"
-    lockedHeight: 1
-	- name: cell10
-    width: ""
-    height: "5px"
-    lockedHeight: 1
----
-
 {% assign cellCounter = 0 %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
@@ -81,8 +36,9 @@ cells:
 	  {% endfor %}
 
 
-   {% for cell in site.data.cells.ConfigureCells %}
-            com/{{ cell.username }}
+   {% for configureCells in site.data.cells %}
+     {% assign configCell = configureCells[1] %}
+            com/{{ configCell.username }}
           {% endfor %}
 	    
 	<script  type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
