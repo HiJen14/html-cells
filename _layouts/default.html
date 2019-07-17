@@ -40,10 +40,15 @@
 	    
 
   	<script type="text/javascript">
-      		var cellsWidth = [
+		{% for cellConfig in site.data.cells.ConfigureCells %}
+			var myVar = {{ cellConfig.width | json }};
+			Console.log(myVar) ;
+		{% endfor %}
+		
+      		/*var cellsWidth = [
 			{% for cellConfig in site.data.cells.ConfigureCells %}
 			{% if cellConfig == empty %}
-			    {{ "", | strip }}
+			    {{ "", }}
 			{% else %}
 				{{ cellConfig.width }},
 			{% endif %}
@@ -55,7 +60,7 @@
 					{% endif %}
 				{% endif %}
 			{% endfor %}
-		];
+		];*/
   	</script>
 
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
