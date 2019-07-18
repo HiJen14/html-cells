@@ -9,9 +9,8 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     widthCells
     heightCells
     lockedCells
+    ********************************************
     */
-    
-    var percentageOfElement = 100 / cellsOnRow;
     
     var biggestHeight = 0; 
     //look at all cells in a "row". 
@@ -25,6 +24,8 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
             biggestHeight = elementHeight;
         }
     }
+
+    var percentageOfElement = 100 / cellsOnRow;
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
