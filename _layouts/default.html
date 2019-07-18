@@ -28,7 +28,7 @@
 			</script>
 
   </head>
-  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, $widthCells )">
+  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, 'lol' )">
 	  {% include cells/cell.html %}
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}
