@@ -39,11 +39,24 @@
           {% endfor %}
 	  
 	  <script type="text/javascript">
+	  /* Cell data from jekyll (liquid) to JS arrays */
 		var widthCells = [];
+		var heightCells = [];
+		var lockedCells = [];
 		{% for cellConfig in site.data.cells.ConfigureCells %}
 		     var myWidth{{forloop.index}} = '{{ cellConfig.width | json }}';		
 		     widthCells.push(myWidth{{forloop.index}});
 		     console.log(widthCells);
+		{% endfor %}
+		{% for cellConfig in site.data.cells.ConfigureCells %}
+		     var myHeight{{forloop.index}} = '{{ cellConfig.height | json }}';		
+		     heightCells.push(myHeight{{forloop.index}});
+		     console.log(heightCells);
+		{% endfor %}
+		{% for cellConfig in site.data.cells.ConfigureCells %}
+		     var myLocked{{forloop.index}} = '{{ cellConfig.lockedHeight | json }}';		
+		     lockedCells.push(myLocked{{forloop.index}});
+		     console.log(lockedCells);
 		{% endfor %}
   	</script>
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
