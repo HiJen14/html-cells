@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}" media="screen" type="text/css">
-    <link rel="stylesheet" href="{{ '/assets/css/print.css' }}" media="print" type="text/css">
+    <!-- <link rel="stylesheet" href="{{ '/assets/css/print.css' }}" media="print" type="text/css"> -->
 	  
 		<title>{{ site.siteName }} </title>
 		<meta name="generator" content="Jekyll v3.8.5" />
@@ -28,7 +28,7 @@
 			</script>
 
   </head>
-  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }} )">
+  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}  {{ '/xml/ConfigureCells.xml' | prepend: site.baseurl }} )">
 	  {% include cells/cell.html %}
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}

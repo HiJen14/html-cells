@@ -7,7 +7,7 @@
         console.log(cellID.outerHTML);
     };*/
 
-function InitializeCells(totalMainCells, cellsOnRow) 
+function InitializeCells(totalMainCells, cellsOnRow, xmlUrl) 
 {
    //Read XML file
     var xmlCellConfig = "";
@@ -19,7 +19,7 @@ function InitializeCells(totalMainCells, cellsOnRow)
 			xmlCellConfig = objXMLHttpRequest.responseXML
         }
     };
-    objXMLHttpRequest.open("GET", "XML/ConfigureCells.xml", true);
+    objXMLHttpRequest.open("GET", xmlUrl, true);
     objXMLHttpRequest.send();
 	
 	var parser, xml;
