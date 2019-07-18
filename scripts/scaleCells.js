@@ -17,6 +17,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 		if (objXMLHttpRequest.readyState == 4 && objXMLHttpRequest.status == 200) 
 		{
 			xmlCellConfig = objXMLHttpRequest.responseXML
+			console.log(xmlCellConfig)
         }
     };
     objXMLHttpRequest.open("GET", xmlUrl, true);
