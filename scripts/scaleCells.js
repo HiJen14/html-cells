@@ -10,7 +10,7 @@
 function InitializeCells(totalMainCells, cellsOnRow, xmlUrl) 
 {
    //Read XML file
-    var xmlCellConfig = "";
+    /*var xmlCellConfig = "";
     var objXMLHttpRequest = new XMLHttpRequest();
     objXMLHttpRequest.onreadystatechange = function () 
 	{
@@ -46,7 +46,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 		answers.push(nodes[i].childNodes[0].nodeValue);
 	}
 
-	console.log(answers)
+	console.log(answers)*/
     
     var percentageOfElement = 100 / cellsOnRow;
     

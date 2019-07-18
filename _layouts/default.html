@@ -39,14 +39,14 @@
           {% endfor %}
 	  
 	  <script type="text/javascript">
-		/*{% for cellConfig in site.data.cells.ConfigureCells %}
+		{% for cellConfig in site.data.cells.ConfigureCells %}
 			{% if cellConfig %}
-			    var myVar{{forloop.index}};
+			    var myVar{{forloop.index}} = "-";
 			{% else %}
 		            var myVar{{forloop.index}} = {{ cellConfig.width | json }};
 			{% endif %}			
 			Console.log(myVar{{forloop.index}}) ;
-		{% endfor %}*/
+		{% endfor %}
 		
   	</script>
 
