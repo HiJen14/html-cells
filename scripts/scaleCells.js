@@ -37,6 +37,8 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 	}
 
 	var nodes = xml.getElementsByTagName('cell');
+	
+		console.log(nodes)
 
 	var i, l = nodes.length, answers = [];
 	for (i = 0; i < l; i++) {
