@@ -16,8 +16,8 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 	{
 		if (objXMLHttpRequest.readyState == 4 && objXMLHttpRequest.status == 200) 
 		{
-			xmlCellConfig = objXMLHttpRequest.responseXML
-			console.log(xmlCellConfig)
+			xmlCellConfig = objXMLHttpRequest.responseXML;
+			console.log(xmlCellConfig);
         }
     };
     objXMLHttpRequest.open("GET", xmlUrl, true);
@@ -39,14 +39,14 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 
 	var nodes = xml.getElementsByTagName('cell');
 	
-		console.log(nodes)
+		console.log(nodes);
 
 	var i, l = nodes.length, answers = [];
 	for (i = 0; i < l; i++) {
 		answers.push(nodes[i].childNodes[0].nodeValue);
 	}
 
-	console.log(answers)*/
+	console.log(answers);*/
     
     var percentageOfElement = 100 / cellsOnRow;
     

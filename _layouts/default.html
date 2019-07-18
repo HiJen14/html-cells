@@ -41,7 +41,7 @@
 	  <script type="text/javascript">
 		{% for cellConfig in site.data.cells.ConfigureCells %}
 		            var myVar{{forloop.index}} = '{{ cellConfig.width | json }}';		
-			Console.log(myVar{{forloop.index}}) ;
+			console.log(myVar{{forloop.index}}) ;
 		{% endfor %}
 		
   	</script>
