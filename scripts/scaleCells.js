@@ -7,15 +7,43 @@
         console.log(cellID.outerHTML);
     };*/
 
-//var cellData = new Array(3);
-
 function InitializeCells(totalMainCells, cellsOnRow) 
 {
-    //Initialise array in array
-    /*for (var i = 0; i < cellData.length; i++) 
-    {
-        cellData[i] = new Array(totalMainCells);
-    }*/
+   //Read XML file
+    var xmlCellConfig = "";
+    var objXMLHttpRequest = new XMLHttpRequest();
+    objXMLHttpRequest.onreadystatechange = function () 
+	{
+		if (objXMLHttpRequest.readyState == 4 && objXMLHttpRequest.status == 200) 
+		{
+			xmlCellConfig = objXMLHttpRequest.responseXML
+        }
+    };
+    objXMLHttpRequest.open("GET", "XML/ConfigureCells.xml", true);
+    objXMLHttpRequest.send();
+	
+	var parser, xml;
+	//All browsers 
+	if (window.DOMParser) 
+	{
+		parser = new DOMParser();
+		xml = parser.parseFromString(xmlCellConfig, 'text/xml');
+	}
+	else 
+	{ // For internet explorer
+		xml = new ActiveXObject('Microsoft.XMLDOM');
+		xml.async = false;
+		xml.loadXML(xmlCellConfig);
+	}
+
+	var nodes = xml.getElementsByTagName('cell');
+
+	var i, l = nodes.length, answers = [];
+	for (i = 0; i < l; i++) {
+		answers.push(nodes[i].childNodes[0].nodeValue);
+	}
+
+	console.log(answers)
     
     var percentageOfElement = 100 / cellsOnRow;
     
