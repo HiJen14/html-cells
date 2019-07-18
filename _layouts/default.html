@@ -39,13 +39,13 @@
           {% endfor %}
 	  
 	  <script type="text/javascript">
+		var widthCells = [];
 		{% for cellConfig in site.data.cells.ConfigureCells %}
-		            var myVar{{forloop.index}} = '{{ cellConfig.width | json }}';		
-			console.log(myVar{{forloop.index}}) ;
+		     var myWidth{{forloop.index}} = '{{ cellConfig.width | json }}';		
+		     widthCells.push(myWidth{{forloop.index}});
+		     console.log(widthCells);
 		{% endfor %}
-		
   	</script>
-
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
   </body>
 </html>
