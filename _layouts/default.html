@@ -28,7 +28,7 @@
 			</script>
 
   </head>
-  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}  {{ '/xml/ConfigureCells.xml' | prepend: site.baseurl }} )">
+  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, {{ '/xml/ConfigureCells.xml' | prepend: site.baseurl }} )">
 	  {% include cells/cell.html %}
 	 
    {% for cellConfig in site.data.cells.ConfigureCells %}
