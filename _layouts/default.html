@@ -40,7 +40,7 @@
 	  
 	  <script type="text/javascript">
 		{% for cellConfig in site.data.cells.ConfigureCells %}
-			{% if cellConfig %}
+			{% if cellConfig == null %}
 			    var myVar{{forloop.index}} = "-";
 			{% else %}
 		            var myVar{{forloop.index}} = {{ cellConfig.width | json }};

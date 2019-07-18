@@ -9,7 +9,7 @@
     height: ""
     lockedHeight: 0
   - name: cell03
-    width: "10"
+    width: "10px"
     height: ""
     lockedHeight: 0
   - name: cell04
