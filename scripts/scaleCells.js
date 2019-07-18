@@ -47,6 +47,8 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 	}
 
 	console.log(answers);*/
+	
+    console.log(widthCells);
     
     var percentageOfElement = 100 / cellsOnRow;
     
