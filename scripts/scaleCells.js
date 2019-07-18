@@ -3,7 +3,13 @@
 
 function InitializeCells(totalMainCells, cellsOnRow, xmlUrl) 
 {
-    console.log(widthCells);
+    /*
+    JS array names, initialised outside JS file.
+
+    widthCells
+    heightCells
+    lockedCells
+    */
     
     var percentageOfElement = 100 / cellsOnRow;
     
