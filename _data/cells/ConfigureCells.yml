@@ -1,11 +1,11 @@
 #jeklly Object with info about
 
   - name: cell01
-    width: ""
+    width: "-"
     height: ""
     lockedHeight: 0
   - name: cell02
-    width: ""
+    width: "-"
     height: ""
     lockedHeight: 0
   - name: cell03
@@ -13,30 +13,30 @@
     height: ""
     lockedHeight: 0
   - name: cell04
-    width: ""
+    width: "-"
     height: ""
     lockedHeight: 0
   - name: cell05
-    width: ""
+    width: "-"
     height: ""
     lockedHeight: 0
   - name: cell06
-    width: ""
+    width: "-"
     height: "5px"
     lockedHeight: 1
   - name: cell07
-    width: ""
+    width: "-"
     height: "5px"
     lockedHeight: 1
   - name: cell08
-    width: ""
+    width: "-"
     height: "5px"
     lockedHeight: 1
   - name: cell09
-    width: ""
+    width: "-"
     height: "5px"
     lockedHeight: 1
   - name: cell10
-    width: ""
+    width: "-"
     height: "5px"
     lockedHeight: 1
