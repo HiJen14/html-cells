@@ -37,10 +37,6 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
 		
     }
-	
-
-
-	var totalPercentage;
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
@@ -48,12 +44,9 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 		
 		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
 		
-		totalPercentage += document.getElementById("cell" + i.toString()).offsetWidth / screenWidth * 100; 
-		
         var element = document.getElementById("cell" + i.toString());
         element.style.width =  percentageOfElement.toString() + "%";
         element.style.height = biggestHeight.toString() + "px";
     }
 	
-	console.log(totalPercentage);
 }
