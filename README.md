@@ -3,7 +3,7 @@
 Jekyll website by cell principle.
 
 New system to align site elements with cells.
-Cells don't use CSS padding and margin to scale, but inner levels of course can. 
+Cells don't use CSS padding and margin to scale, but inner levels ofcourse can. 
 ```HTML
  <div>, <p>, <h1>, etc. and markdown.
 ```
