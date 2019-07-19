@@ -26,9 +26,14 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     }
 
     var percentageOfElement = 100 / cellsOnRow;
+	
+
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
+	    console.log($("cell" + i.toString()).width());
+		
+		
         var element = document.getElementById("cell" + i.toString());
         element.style.width =  percentageOfElement.toString() + "%";
         element.style.height = biggestHeight.toString() + "px";
