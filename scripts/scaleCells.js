@@ -31,7 +31,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
-		console.log(document.body.clientWidth);
+		console.log(document.body.offsetWidth);
 		console.log(document.getElementById("cell" + i.toString()).offsetWidth);
 		
 		
