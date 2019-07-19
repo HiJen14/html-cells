@@ -31,7 +31,8 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
-		console.log($("#cell" + i.toString()).width());
+		var width = $("#cell" + i.toString()).width();
+		console.log(width);
 		
 		
         var element = document.getElementById("cell" + i.toString());
