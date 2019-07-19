@@ -33,8 +33,9 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
-		console.log(document.body.offsetWidth);
-		console.log(document.getElementById("cell" + i.toString()).offsetWidth);
+		console.log(window.innerWidth);
+		
+		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
 		
 		totalPercentage += document.getElementById("cell" + i.toString()).offsetWidth / screenWidth * 100; 
 		
