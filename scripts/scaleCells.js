@@ -26,9 +26,20 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     }
 
     var percentageOfElement = 100 / cellsOnRow;
+	var screenWidth = document.body.offsetWidth;
+	
+	for (i = 1; i <= cellsOnRow; i++) 
+    {
+		
+		
+		console.log(window.innerWidth);
+		if(percentageOfElement)
+		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
+		
+    }
 	
 
-	var screenWidth = document.body.offsetWidth;
+
 	var totalPercentage;
     
     for (i = 1; i <= cellsOnRow; i++) 

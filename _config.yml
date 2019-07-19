@@ -5,8 +5,8 @@ description: New system to align site elements with cells.
 baseurl: "https://hiJen14.github.io/html-cells"
 
 #site - variablen for properties cells on a page.
-totalMainCells: 10
-cellsOnRow: 5
+totalMainCells: 20
+cellsOnRow: 10
 
 #Build settings
 markdown: kramdown
