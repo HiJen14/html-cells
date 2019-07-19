@@ -28,15 +28,20 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     var percentageOfElement = 100 / cellsOnRow;
 	
 
+	var screenWidth = document.body.offsetWidth;
+	var totalPercentage;
     
     for (i = 1; i <= cellsOnRow; i++) 
     {
-		console.log(document.html.offsetWidth);
+		console.log(document.body.offsetWidth);
 		console.log(document.getElementById("cell" + i.toString()).offsetWidth);
 		
+		totalPercentage += document.getElementById("cell" + i.toString()).offsetWidth / screenWidth * 100; 
 		
         var element = document.getElementById("cell" + i.toString());
         element.style.width =  percentageOfElement.toString() + "%";
         element.style.height = biggestHeight.toString() + "px";
     }
+	
+	console.log(totalPercentage);
 }
