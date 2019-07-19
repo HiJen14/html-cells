@@ -2,7 +2,9 @@
 
 Jekyll website by cell principle.
 
- New system to align site elements with cells, removing the need of CSS padding and margin.
+ New system to align site elements with cells.
+ Cells don't use CSS padding and margin to scale, but inner levels of course can.
+ Divs, <p>, <h1>, etc. and markdown.
  And at the same time adding functionaly that is harder to achieve with padding and margin.
  Because grithub pages uses Jeklly this system is showcased using 
  Jeklly.
