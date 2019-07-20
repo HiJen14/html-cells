@@ -41,7 +41,6 @@
     width: 1
     height: "5px"
     lockedHeight: 1
-	
   - name: cell_11
     width: "-"
     height: ""
