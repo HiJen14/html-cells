@@ -11,6 +11,9 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     lockedCells
     ********************************************
     */
+	
+	/* Performances calculation */
+	var startTime = new Date();
     
 	var totalWidthCount = 0;
     //look at all cells in a "row". 
@@ -21,7 +24,6 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 		totalWidthCount += parseInt(widthCells[i-1]);
 		console.log(totalWidthCount);
     }
-
 	
 	//  100% / totalWidthCount 
 	var percentage = 100 / totalWidthCount;
@@ -58,4 +60,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
         element.style.height = biggestHeight.toString() + "px";
     }	
 	
+	/* Performances calculation */
+	var Duration = new Date() - startTime;
+	console.log(Duration);
 }
