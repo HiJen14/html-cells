@@ -26,7 +26,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
         }
 		
 		/*Count up the widthCells percentage count*/
-		totalWidthCount += widthCells[i];
+		totalWidthCount += parseInt(widthCells[i]);
 		console.log(totalWidthCount);
     }
 
@@ -39,7 +39,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     {	
         var element = document.getElementById("cell" + i.toString());
 		
-		var percentageOfElement = widthCells[i] * percentage;
+		var percentageOfElement = parseInt(widthCells[i]) * percentage;
 		console.log(percentageOfElement);
         element.style.width =  percentageOfElement.toString() + "%";
 		

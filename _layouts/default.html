@@ -44,7 +44,7 @@
 		var heightCells = [];
 		var lockedCells = [];
 		{% for cellConfig in site.data.cells.ConfigureCells %}
-		     var myWidth{{forloop.index}} = {{ cellConfig.width | json }};		
+		     var myWidth{{forloop.index}} = '{{ cellConfig.width | json }}';		
 		     widthCells.push(myWidth{{forloop.index}});
 		     console.log(widthCells);
 		{% endfor %}
