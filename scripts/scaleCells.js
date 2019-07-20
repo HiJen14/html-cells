@@ -61,6 +61,9 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     }	
 	
 	/* Performances calculation */
-	var Duration = new Date() - startTime;
-	console.log(Duration);
+	if(debugModus)
+	{
+		var Duration = new Date() - startTime;
+		console.log(Duration + "ms");
+	}
 }
