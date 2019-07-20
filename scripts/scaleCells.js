@@ -27,20 +27,22 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
 		
 		/*Count up the widthCells percentage count*/
 		totalWidthCount += widthCells[i];
+		console.log(totalWidthCount);
     }
 
 	
 	//  100% / totalWidthCount 
 	var percentage = 100 / totalWidthCount;
+	console.log(percentage);
     
     for (i = 1; i <= cellsOnRow; i++) 
     {	
         var element = document.getElementById("cell" + i.toString());
 		
 		var percentageOfElement = widthCells[i] * percentage;
+		console.log(percentageOfElement);
         element.style.width =  percentageOfElement.toString() + "%";
 		
         element.style.height = biggestHeight.toString() + "px";
-    }
-	
+    }	
 }
