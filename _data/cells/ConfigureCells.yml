@@ -1,5 +1,5 @@
 #jeklly Object with info about
-# width in percentage (1x, 6x, etc.)
+# - width in points of percentage (1x, 6x, etc.)
 
   - name: cell_01
     width: 1

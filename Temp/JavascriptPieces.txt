@@ -4,6 +4,8 @@
         console.log(cellID.outerHTML);
     };*/
 	
+   ********************************************************************
+	
 	//Read XML file
     /*var xmlCellConfig = "";
     var objXMLHttpRequest = new XMLHttpRequest();
@@ -44,3 +46,19 @@
 	}
 
 	console.log(answers);*/
+	
+	********************************************************************
+
+	/* Do it with element widths **
+	var screenWidth = document.body.offsetWidth;
+	
+	for (i = 1; i <= cellsOnRow; i++) 
+    {
+		
+		
+		console.log(window.innerWidth);
+		if(percentageOfElement)
+		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
+		
+    }
+	*/

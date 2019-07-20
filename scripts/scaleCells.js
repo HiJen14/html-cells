@@ -13,6 +13,7 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
     */
     
     var biggestHeight = 0; 
+	var totalWidthCount = 0;
     //look at all cells in a "row". 
     //A row isn't defined by <div>, but by cellsOnRow
     for (var i = 1; i <= cellsOnRow; i++) 
@@ -23,29 +24,22 @@ function InitializeCells(totalMainCells, cellsOnRow, xmlUrl)
         {
             biggestHeight = elementHeight;
         }
+		
+		/*Count up the widthCells percentage count*/
+		totalWidthCount += widthCells[i];
     }
 
-    var percentageOfElement = 100 / cellsOnRow;
-	var screenWidth = document.body.offsetWidth;
 	
-	for (i = 1; i <= cellsOnRow; i++) 
-    {
-		
-		
-		console.log(window.innerWidth);
-		if(percentageOfElement)
-		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
-		
-    }
+	//  100% / totalWidthCount 
+	var percentage = 100 / totalWidthCount;
     
     for (i = 1; i <= cellsOnRow; i++) 
-    {
-		console.log(window.innerWidth);
-		
-		console.log(document.getElementById("cell" + i.toString()).getBoundingClientRect().width + " " + document.getElementById("cell" + i.toString()).offsetWidth);
-		
+    {	
         var element = document.getElementById("cell" + i.toString());
+		
+		var percentageOfElement = widthCells[i] * percentage;
         element.style.width =  percentageOfElement.toString() + "%";
+		
         element.style.height = biggestHeight.toString() + "px";
     }
 	
