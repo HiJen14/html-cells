@@ -25,7 +25,7 @@ function InitializeCells()
     
 	var rows = totalMainCells / cellsOnRow;
 	
-	cvonsole.log(heightCells[0]);
+	console.log(heightCells[0]);
 	
 	//needed for calculating each row.
 	for(var j = 0; j < rows; j++)
