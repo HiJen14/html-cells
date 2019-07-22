@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}" media="screen" type="text/css">
+	<noscript></noscript>
     <!-- <link rel="stylesheet" href="{{ '/assets/css/print.css' }}" media="print" type="text/css"> -->
 	  
 		<title>{{ site.siteName }} </title>
@@ -28,19 +29,14 @@
 			</script>
 
   </head>
-  <body onload="InitializeCells( {{ site.totalMainCells }}, {{ site.cellsOnRow }}, 'lol' )">
+  <body onload="InitializeCells()">
 	  {% include cells/cell.html %}
-	 
-   {% for cellConfig in site.data.cells.ConfigureCells %}
-            <br>
-            {{ cellConfig.width }} <br>
-            {{ cellConfig.height }} <br>
-            {{ cellConfig.lockedHeight }}
-          {% endfor %}
 	  
 	  <script type="text/javascript">
 	  /* Giving all variablen from _config to javascript */
-	  var debugModus = {{site.DebugModus}}
+	  var debugModus = {{site.DebugModus}};
+	  var totalMainCells = {{ site.totalMainCells }}; 
+	  var cellsOnRow = {{ site.cellsOnRow }};
 	  /* Cell data from jekyll (liquid) to JS arrays */
 		var widthCells = [];
 		var heightCells = [];
