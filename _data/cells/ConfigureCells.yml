@@ -42,42 +42,42 @@
     height: "5px"
     lockedHeight: 1
   - name: cell_11
-    width: "-"
+    width: 1
     height: ""
     lockedHeight: 0
   - name: cell_12
-    width: "-"
+    width: 1
     height: ""
     lockedHeight: 0
   - name: cell_13
-    width: "10px"
+    width: 1
     height: ""
     lockedHeight: 0
   - name: cell_14
-    width: "-"
+    width: 1
     height: ""
     lockedHeight: 0
   - name: cell_15
-    width: "-"
+    width: 1
     height: ""
     lockedHeight: 0
   - name: cell_16
-    width: "-"
+    width: 1
     height: "5px"
     lockedHeight: 1
   - name: cell_17
-    width: "-"
+    width: 1
     height: "5px"
     lockedHeight: 1
   - name: cell_18
-    width: "-"
+    width: 1
     height: "5px"
     lockedHeight: 1
   - name: cell_19
-    width: "-"
+    width: 1
     height: "5px"
     lockedHeight: 1
   - name: cell_20
-    width: "-"
+    width: 1
     height: "5px"
     lockedHeight: 1
