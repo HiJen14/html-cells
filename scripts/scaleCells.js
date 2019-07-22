@@ -25,7 +25,7 @@ function InitializeCells()
     
 	var rows = totalMainCells / cellsOnRow;
 	
-	console.log(heightCells[0]);
+	console.log(heightCells[0] == null);
 	
 	//needed for calculating each row.
 	for(var j = 0; j < rows; j++)
@@ -74,8 +74,16 @@ function InitializeCells()
 		for (i = 1; i <= cellsOnRow; i++) 
 		{
 			var element = document.getElementById("cell" + (i + startOfRow).toString());
-		
-			element.style.height = biggestHeight.toString() + "px";
+			
+			//Lock height or not.
+			if(heightCells[i -1] != null))
+			{
+				element.style.height = heightCells.toString() + "px";
+			}
+			else
+			{
+				element.style.height = biggestHeight.toString() + "px";
+			}
 		}	
 	}
 	
