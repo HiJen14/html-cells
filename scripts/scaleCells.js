@@ -75,10 +75,13 @@ function InitializeCells()
 		{
 			var element = document.getElementById("cell" + (i + startOfRow).toString());
 			
+			//Height
+			var thisHeight = heightCells[i + startOfRow - 1];
+			
 			//Lock height or not.
-			if(heightCells[i + startOfRow - 1] != "")
+			if(thisHeight != "")
 			{
-				element.style.height = heightCells.toString() + "px";
+				element.style.height = thisHeight.toString() + "px";
 			}
 			else
 			{
