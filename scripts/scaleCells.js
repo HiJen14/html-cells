@@ -1,7 +1,10 @@
 /*Script to rock the cells. Or scale them!*/
 /******************************************/
 
-function InitializeCells() 
+/*onResize == false: First time function loaded in onLoad
+  onResize == true: In the onresize event not everything needs to be calculated
+*/
+function InitializeCells(onResize) 
 {
     /*
     JS variable names, initialised outside JS file.
@@ -31,27 +34,30 @@ function InitializeCells()
 		//Calculate beginning each row.
 		var startOfRow = j * cellsOnRow;
 		
-		var totalWidthCount = 0;
-		//look at all cells in a "row". 
-		//A row isn't defined by <div>, but by cellsOnRow
-		for (var i = 1; i <= cellsOnRow; i++) 
-		{	
-			/*Count up the widthCells percentage count*/
-			totalWidthCount += parseInt(widthCells[i + startOfRow - 1]);
-		}
+		if(!onResize)
+		{
+			var totalWidthCount = 0;
+			//look at all cells in a "row". 
+			//A row isn't defined by <div>, but by cellsOnRow
+			for (var i = 1; i <= cellsOnRow; i++) 
+			{	
+				/*Count up the widthCells percentage count*/
+				totalWidthCount += parseInt(widthCells[i + startOfRow - 1]);
+			}
 	
-		//  100% / totalWidthCount 
-		var percentage = 100 / totalWidthCount;
+			//  100% / totalWidthCount 
+			var percentage = 100 / totalWidthCount;
     
-		/*Put width on <div id="cell">*/
-		for (i = 1; i <= cellsOnRow; i++) 
-		{	
-			var element = document.getElementById("cell" + (i + startOfRow).toString());
+			/*Put width on <div id="cell">*/
+			for (i = 1; i <= cellsOnRow; i++) 
+			{	
+				var element = document.getElementById("cell" + (i + startOfRow).toString());
 		
-			//Calculate width of each cell.
-			var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * percentage;
-			element.style.width = percentageOfElement.toString() + "%";
-		}	
+				//Calculate width of each cell.
+				var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * percentage;
+				element.style.width = percentageOfElement.toString() + "%";
+			}	
+		}
 	
 		var biggestHeight = 0; 
 		if(debugModus)
@@ -63,15 +69,12 @@ function InitializeCells()
 		for (var i = 1; i <= cellsOnRow; i++) 
 		{
 			/*Find biggest element height*/
-			var elementHeight = document.getElementById("cell" + (i + startOfRow).toString()).clientHeight;
+			var elementHeight = document.getElementById("cell" + (i + startOfRow).toString()).scrollHeight;
 			if(elementHeight > biggestHeight)
 			{
 				biggestHeight = elementHeight;
 			}
 		}
-		
-		console.log("document.getElementById().clientHeight " + document.getElementById("cell1").clientHeight);
-		console.log("document.getElementById().innerHeight " + document.getElementById("cell1").scrollHeight);
 		
 		if(debugModus)
 		{
