@@ -59,6 +59,18 @@ function InitializeCells(onResize)
 			}	
 		}
 	
+		/*needed to resize well*/
+		if(onResize)
+		{
+			/*Put height on <div id="cell">*/
+			for (i = 1; i <= cellsOnRow; i++) 
+			{
+				var element = document.getElementById("cell" + (i + startOfRow).toString());
+			
+				element.style.height = "1px";
+			}	
+		}
+	
 		var biggestHeight = 0; 
 		if(debugModus)
 		{
