@@ -1,6 +1,14 @@
 /*Script to rock the cells. Or scale them!*/
 /******************************************/
 
+function boolean IsMobile()
+{
+	console.log(window.screen.height);
+	console.log(window.screen.width);
+	
+	return true;
+}
+
 /*onResize == false: First time function loaded in onLoad
   onResize == true: In the onresize event not everything needs to be calculated
 */
@@ -19,6 +27,8 @@ function InitializeCells(onResize)
     lockedCells
     ********************************************
     */
+	
+	IsMobile();
 	
 	/* Performances calculation */
 	if(debugModus)
