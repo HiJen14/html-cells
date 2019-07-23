@@ -37,7 +37,7 @@ function InitializeCells(onResize)
     ********************************************
     */
 	
-	console(IsMobile());
+	console.log(IsMobile());
 	
 	/* Performances calculation */
 	if(debugModus)
