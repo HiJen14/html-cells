@@ -43,41 +43,41 @@
     lockedHeight: 1
   - name: cell_11
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 0
   - name: cell_12
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 0
   - name: cell_13
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 0
   - name: cell_14
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 0
   - name: cell_15
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 0
   - name: cell_16
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 1
   - name: cell_17
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 1
   - name: cell_18
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 1
   - name: cell_19
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 1
   - name: cell_20
     width: 1
-    height: "5"
+    height: "15"
     lockedHeight: 1
