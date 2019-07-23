@@ -3,7 +3,16 @@
 
 function IsMobile()
 {
-	console.log(window.screen.height);
+	if(window.outerWidth < 1536 || window.outerHeight < 864)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+		
+	console.log(window.outerWidth);
 	console.log(window.screen.width);
 	
 	return true;
@@ -28,7 +37,7 @@ function InitializeCells(onResize)
     ********************************************
     */
 	
-	IsMobile();
+	console(IsMobile());
 	
 	/* Performances calculation */
 	if(debugModus)
