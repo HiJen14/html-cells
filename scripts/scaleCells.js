@@ -71,7 +71,7 @@ function InitializeCells()
 		}
 		
 		console.log("document.getElementById().clientHeight " + document.getElementById("cell1").clientHeight);
-		console.log("document.getElementById().innerHeight " + document.getElementById("cell1").innerHeight);
+		console.log("document.getElementById().innerHeight " + document.getElementById("cell1").scrollHeight);
 		
 		if(debugModus)
 		{
