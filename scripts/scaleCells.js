@@ -52,8 +52,8 @@ function InitializeCells()
 		
 			//Calculate width of each cell.
 			var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * percentage;
-			//console.log(percentageOfElement);
-			element.style.width =  percentageOfElement.toString() + "%";
+			console.log(percentageOfElement);
+			element.style.width = percentageOfElement.toString() + "%";
 		}	
 	
 		var biggestHeight = 0; 
@@ -77,6 +77,8 @@ function InitializeCells()
 			
 			//Height
 			var thisHeight = heightCells[i + startOfRow - 1];
+			
+			console.log(biggestHeight);
 			
 			//Lock height or not.
 			if(thisHeight != "")
