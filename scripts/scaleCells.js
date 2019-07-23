@@ -25,8 +25,6 @@ function InitializeCells()
     
 	var rows = totalMainCells / cellsOnRow;
 	
-	console.log(heightCells[0] == "");
-	
 	//needed for calculating each row.
 	for(var j = 0; j < rows; j++)
 	{
@@ -52,22 +50,29 @@ function InitializeCells()
 		
 			//Calculate width of each cell.
 			var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * percentage;
-			console.log(percentageOfElement);
 			element.style.width = percentageOfElement.toString() + "%";
 		}	
 	
 		var biggestHeight = 0; 
+		if(debugModus)
+		{
+			console.log("Height: " + biggestHeight);
+		}
 		//look at all cells in a "row". 
 		//A row isn't defined by <div>, but by cellsOnRow
 		for (var i = 1; i <= cellsOnRow; i++) 
 		{
 			/*Find biggest element height*/
 			var elementHeight = document.getElementById("cell" + (i + startOfRow).toString()).clientHeight;
-			//console.log(elementHeight);
 			if(elementHeight > biggestHeight)
 			{
 				biggestHeight = elementHeight;
 			}
+		}
+		
+		if(debugModus)
+		{
+			console.log("Height: " + biggestHeight);
 		}
 	
 		/*Put height on <div id="cell">*/
@@ -77,8 +82,6 @@ function InitializeCells()
 			
 			//Height
 			var thisHeight = heightCells[i + startOfRow - 1];
-			
-			console.log(biggestHeight);
 			
 			//Lock height or not.
 			if(thisHeight != "")
