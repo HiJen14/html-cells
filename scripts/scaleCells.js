@@ -1,7 +1,7 @@
 /*Script to rock the cells. Or scale them!*/
 /******************************************/
 
-function boolean IsMobile()
+function IsMobile()
 {
 	console.log(window.screen.height);
 	console.log(window.screen.width);
