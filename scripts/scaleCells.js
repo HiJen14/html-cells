@@ -70,6 +70,9 @@ function InitializeCells()
 			}
 		}
 		
+		console.log("document.getElementById("cell1").clientHeight " + document.getElementById("cell1").clientHeight);
+		console.log("document.getElementById("cell1").innerHeight " + document.getElementById("cell1").innerHeight);
+		
 		if(debugModus)
 		{
 			console.log("Height: " + biggestHeight);
