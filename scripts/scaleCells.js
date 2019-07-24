@@ -43,11 +43,11 @@ function InitializeCells(onResize)
 	
 	if(IsMobile())
 	{
-		InitializeCellsLowRez(true, onresize);
+		InitializeCellsLowRez(true, onResize);
 	}
 	else
 	{
-		InitializeCellsLowRez(false, onresize);
+		InitializeCellsLowRez(false, onResize);
 	}
 	
 	/* Performances calculation */
@@ -114,7 +114,7 @@ function InitializeCellsLowRez(lowRes, onResize)
 			}	
 		}
 	
-		/*needed to resize well*/
+		/*needed to resize height well*/
 		if(onResize)
 		{
 			/*Put height on <div id="cell">*/
