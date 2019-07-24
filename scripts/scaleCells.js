@@ -101,12 +101,14 @@ function InitializeCellsLowRez(lowRes, onResize)
 				{
 					//Calculate width of each cell.
 					var partOfElement = parseInt(widthCells[i + startOfRow - 1]) * resolutionPart;
+					console.log(partOfElement.toString() + "px");
 					element.style.width = partOfElement.toString() + "px";
 				}
 				else
 				{
 					//Calculate width of each cell.
 					var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * resolutionPart;
+					console.log(percentageOfElement.toString() + "%");
 					element.style.width = percentageOfElement.toString() + "%";
 				}
 			}	
