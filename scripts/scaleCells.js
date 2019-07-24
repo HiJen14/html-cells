@@ -1,6 +1,7 @@
 /*Script to rock the cells. Or scale them!*/
 /******************************************/
 
+/*check for low resolution*/
 function IsMobile()
 {
 	if(window.outerWidth < 1536 || window.outerHeight < 864)
@@ -37,99 +38,19 @@ function InitializeCells(onResize)
     ********************************************
     */
 	
-	console.log(IsMobile());
-	
 	/* Performances calculation */
 	if(debugModus)
 	{
 		var startTime = new Date();
 	}
-    
-	var rows = totalMainCells / cellsOnRow;
 	
-	//needed for calculating each row.
-	for(var j = 0; j < rows; j++)
+	if(IsMobile())
 	{
-		//Calculate beginning each row.
-		var startOfRow = j * cellsOnRow;
-		
-		if(!onResize)
-		{
-			var totalWidthCount = 0;
-			//look at all cells in a "row". 
-			//A row isn't defined by <div>, but by cellsOnRow
-			for (var i = 1; i <= cellsOnRow; i++) 
-			{	
-				/*Count up the widthCells percentage count*/
-				totalWidthCount += parseInt(widthCells[i + startOfRow - 1]);
-			}
-	
-			//  100% / totalWidthCount 
-			var percentage = 100 / totalWidthCount;
-    
-			/*Put width on <div id="cell">*/
-			for (i = 1; i <= cellsOnRow; i++) 
-			{	
-				var element = document.getElementById("cell" + (i + startOfRow).toString());
-		
-				//Calculate width of each cell.
-				var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * percentage;
-				element.style.width = percentageOfElement.toString() + "%";
-			}	
-		}
-	
-		/*needed to resize well*/
-		if(onResize)
-		{
-			/*Put height on <div id="cell">*/
-			for (i = 1; i <= cellsOnRow; i++) 
-			{
-				var element = document.getElementById("cell" + (i + startOfRow).toString());
-			
-				element.style.height = "1px";
-			}	
-		}
-	
-		var biggestHeight = 0; 
-		if(debugModus)
-		{
-			console.log("Height: " + biggestHeight);
-		}
-		//look at all cells in a "row". 
-		//A row isn't defined by <div>, but by cellsOnRow
-		for (var i = 1; i <= cellsOnRow; i++) 
-		{
-			/*Find biggest element height*/
-			var elementHeight = document.getElementById("cell" + (i + startOfRow).toString()).scrollHeight;
-			if(elementHeight > biggestHeight)
-			{
-				biggestHeight = elementHeight;
-			}
-		}
-		
-		if(debugModus)
-		{
-			console.log("Height: " + biggestHeight);
-		}
-	
-		/*Put height on <div id="cell">*/
-		for (i = 1; i <= cellsOnRow; i++) 
-		{
-			var element = document.getElementById("cell" + (i + startOfRow).toString());
-			
-			//Height
-			var thisHeight = heightCells[i + startOfRow - 1];
-			
-			//Lock height or not.
-			if(thisHeight != "")
-			{
-				element.style.height = thisHeight.toString() + "px";
-			}
-			else
-			{
-				element.style.height = biggestHeight.toString() + "px";
-			}
-		}	
+		InitializeCellsLowRez(true);
+	}
+	else
+	{
+		InitializeCellsLowRez(false);
 	}
 	
 	/* Performances calculation */
@@ -138,4 +59,113 @@ function InitializeCells(onResize)
 		var Duration = new Date() - startTime;
 		console.log(Duration + "ms");
 	}
+}
+
+function InitializeCellsLowRez(lowRes)
+{
+	var rows = totalMainCells / cellsOnRow;
+	
+		//needed for calculating each row.
+		for(var j = 0; j < rows; j++)
+		{
+			//Calculate beginning each row.
+			var startOfRow = j * cellsOnRow;
+		
+			if(!onResize)
+			{
+				var totalWidthCount = 0;
+				//look at all cells in a "row". 
+				//A row isn't defined by <div>, but by cellsOnRow
+				for (var i = 1; i <= cellsOnRow; i++) 
+				{	
+					/*Count up the widthCells percentage count*/
+					totalWidthCount += parseInt(widthCells[i + startOfRow - 1]);
+				}
+	
+				var resolutionPart;
+	
+				if(lowRes)
+				{
+					//  resolution HD
+					resolutionPart = 1920 / totalWidthCount;
+				}
+				else
+				{
+					//  100% / totalWidthCount (percentage)
+					resolutionPart = 100 / totalWidthCount;
+				}
+			
+				/*Put width on <div id="cell">*/
+				for (i = 1; i <= cellsOnRow; i++) 
+				{	
+					var element = document.getElementById("cell" + (i + startOfRow).toString());
+			
+					if(lowRes)
+					{
+						//Calculate width of each cell.
+						var partOfElement = parseInt(widthCells[i + startOfRow - 1]) * resolutionPart;
+						element.style.width = resolutionPart.toString() + "px";
+					}
+					else
+					{
+						//Calculate width of each cell.
+						var percentageOfElement = parseInt(widthCells[i + startOfRow - 1]) * resolutionPart;
+						element.style.width = percentageOfElement.toString() + "%";
+					}
+				}	
+			}
+		
+			/*needed to resize well*/
+			if(onResize)
+			{
+				/*Put height on <div id="cell">*/
+				for (i = 1; i <= cellsOnRow; i++) 
+				{
+					var element = document.getElementById("cell" + (i + startOfRow).toString());
+				
+					element.style.height = "1px";
+				}	
+			}
+		
+			var biggestHeight = 0; 
+			if(debugModus)
+			{
+				console.log("Height: " + biggestHeight);
+			}
+			//look at all cells in a "row". 
+			//A row isn't defined by <div>, but by cellsOnRow
+			for (var i = 1; i <= cellsOnRow; i++) 
+			{
+				/*Find biggest element height*/
+				var elementHeight = document.getElementById("cell" + (i + startOfRow).toString()).scrollHeight;
+				if(elementHeight > biggestHeight)
+				{
+					biggestHeight = elementHeight;
+				}
+			}
+			
+			if(debugModus)
+			{
+				console.log("Height: " + biggestHeight);
+			}
+		
+			/*Put height on <div id="cell">*/
+			for (i = 1; i <= cellsOnRow; i++) 
+			{
+				var element = document.getElementById("cell" + (i + startOfRow).toString());
+				
+				//Height
+				var thisHeight = heightCells[i + startOfRow - 1];
+				
+				//Lock height or not.
+				if(thisHeight != "")
+				{
+					element.style.height = thisHeight.toString() + "px";
+				}
+				else
+				{
+					element.style.height = biggestHeight.toString() + "px";
+				}
+			}	
+		}
 }
