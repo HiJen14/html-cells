@@ -46,11 +46,11 @@ function InitializeCells(onResize)
 	
 	if(IsMobile())
 	{
-		InitializeCellsLowRez(true);
+		InitializeCellsLowRez(true, onresize);
 	}
 	else
 	{
-		InitializeCellsLowRez(false);
+		InitializeCellsLowRez(false, onresize);
 	}
 	
 	/* Performances calculation */
@@ -61,7 +61,7 @@ function InitializeCells(onResize)
 	}
 }
 
-function InitializeCellsLowRez(lowRes)
+function InitializeCellsLowRez(lowRes, onResize)
 {
 	var rows = totalMainCells / cellsOnRow;
 	
