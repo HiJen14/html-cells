@@ -5,9 +5,10 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}" media="screen" type="text/css">
-	<noscript></noscript>
-    <!-- <link rel="stylesheet" href="{{ '/assets/css/print.css' }}" media="print" type="text/css"> -->
+    <link rel="stylesheet" href="{{ '/assets/css/mainStyle.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}" type="text/css">
+	<noscript>
+		<link rel="stylesheet" href="{{ '/assets/css/noScriptStyle.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}" type="text/css">
+	</noscript>
 	  
 		<title>{{ site.siteName }} </title>
 		<meta name="generator" content="Jekyll v3.8.5" />
@@ -33,30 +34,34 @@
 	  {% include cells/cell.html %}
 	  
 	  <script type="text/javascript">
-	  /* Giving all variablen from _config to javascript */
-	  var debugModus = {{site.DebugModus}};
-	  var totalMainCells = {{ site.totalMainCells }}; 
-	  var cellsOnRow = {{ site.cellsOnRow }};
-	  /* Cell data from jekyll (liquid) to JS arrays */
-		var widthCells = [];
-		var heightCells = [];
-		var lockedCells = [];
-		{% for cellConfig in site.data.cells.ConfigureCells %}
-		     var myWidth{{forloop.index}} = '{{ cellConfig.width | json }}';		
-		     widthCells.push(myWidth{{forloop.index}});
-		     console.log(widthCells);
-		{% endfor %}
-		{% for cellConfig in site.data.cells.ConfigureCells %}
-		     var myHeight{{forloop.index}} = '{{ cellConfig.height | json }}';		
-		     heightCells.push(myHeight{{forloop.index}});
-		     console.log(heightCells);
-		{% endfor %}
-		{% for cellConfig in site.data.cells.ConfigureCells %}
-		     var myLocked{{forloop.index}} = '{{ cellConfig.lockedHeight | json }}';		
-		     lockedCells.push(myLocked{{forloop.index}});
-		     console.log(lockedCells);
-		{% endfor %}
+		  /* Giving all variablen from _config to javascript */
+		  var debugModus = {{site.DebugModus}};
+		  var totalMainCells = {{ site.totalMainCells }}; 
+		  var cellsOnRow = {{ site.cellsOnRow }};
+		  /* Cell data from jekyll (liquid) to JS arrays */
+			var widthCells = [];
+			var heightCells = [];
+			var lockedCells = [];
+			{% for cellConfig in site.data.cells.ConfigureCells %}
+				 var myWidth{{forloop.index}} = '{{ cellConfig.width | json }}';		
+				 widthCells.push(myWidth{{forloop.index}});
+				 console.log(widthCells);
+			{% endfor %}
+			{% for cellConfig in site.data.cells.ConfigureCells %}
+				 var myHeight{{forloop.index}} = '{{ cellConfig.height | json }}';		
+				 heightCells.push(myHeight{{forloop.index}});
+				 console.log(heightCells);
+			{% endfor %}
+			{% for cellConfig in site.data.cells.ConfigureCells %}
+				 var myLocked{{forloop.index}} = '{{ cellConfig.lockedHeight | json }}';		
+				 lockedCells.push(myLocked{{forloop.index}});
+				 console.log(lockedCells);
+			{% endfor %}
   	</script>
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
+	<script type="text/javascript">
+		console.log(document.getElementsByTagName("head")[0]);
+		console.log(document.getElementsByTagName("head")[1]);
+	</script>
   </body>
 </html>
