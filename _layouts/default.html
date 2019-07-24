@@ -60,8 +60,17 @@
   	</script>
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
 	<script type="text/javascript">
-		console.log(document.getElementsByTagName("head")[0]);
-		console.log(document.getElementsByTagName("head")[1]);
+		console.log(document.getElementsByTagName("head"));
+		
+		if(IsMobile)
+		{
+			var linkElement = document.createElement('link');
+
+			linkElement.setAttribute('rel', 'stylesheet');
+			linkElement.setAttribute('href', "{{ '/assets/css/mobileStyle.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}");
+
+			document.getElementsByTagName('head')[0].appendChild(linkElement);
+		}
 	</script>
   </body>
 </html>
