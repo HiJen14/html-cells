@@ -67,9 +67,15 @@
 			var linkElement = document.createElement('link');
 
 			linkElement.setAttribute('rel', 'stylesheet');
+			linkElement.setAttribute('id', 'mobileStyle');
 			linkElement.setAttribute('href', "{{ '/assets/css/mobileStyle.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}");
 
 			document.getElementsByTagName('head')[0].appendChild(linkElement);
+		}
+		else
+		{
+			var linkElement = document.getElementById('mobileStyle');
+			linkElement.parentNode.removeChild(element);
 		}
 	</script>
   </body>
