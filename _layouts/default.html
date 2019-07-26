@@ -35,6 +35,12 @@
 	  
 	  <script type="text/javascript">
 		  /* Giving all variablen from _config to javascript */
+		  /***************************************************/
+		  
+		  /*Mobile*/
+		  var mobileCSSLink = {{ '/assets/css/mobileStyle.cssv=' | prepend: site.baseurl | append: site.github.build_revision }};
+		  
+		  /*ScaleCells*/
 		  var debugModus = {{site.DebugModus}};
 		  var totalMainCells = {{ site.totalMainCells }}; 
 		  var cellsOnRow = {{ site.cellsOnRow }};

@@ -3,7 +3,7 @@
 
 var changeOnes = true;
 
-function Mobile()
+function Mobile(mobileCSSLink)
 {
 	if(IsMobile() && changeOnes)
 	{
@@ -11,7 +11,7 @@ function Mobile()
 
 		linkElement.setAttribute('rel', 'stylesheet');
 		linkElement.setAttribute('id', 'mobileStyle');
-		linkElement.setAttribute('href', {{ 'assetscssmobileStyle.cssv='  prepend site.baseurl  append site.github.build_revision }});
+		linkElement.setAttribute('href', mobileCSSLink);
 
 		document.getElementsByTagName('head')[0].appendChild(linkElement);
 		
