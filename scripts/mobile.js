@@ -5,6 +5,8 @@ var changeOnes = true;
 
 function Mobile(mobileCSSLink)
 {
+	console.log("Mobile() " + IsMobile());
+	console.log("Mobile() " + changeOnes);
 	if(IsMobile() && changeOnes)
 	{
 		var linkElement = document.createElement('link');
