@@ -1,0 +1,30 @@
+/*Script to rock the mobile cell site.*/
+/******************************************/
+
+var changeOnes = true;
+
+function Mobile()
+{
+	if(IsMobile() && changeOnes)
+	{
+		var linkElement = document.createElement('link');
+
+		linkElement.setAttribute('rel', 'stylesheet');
+		linkElement.setAttribute('id', 'mobileStyle');
+		linkElement.setAttribute('href', {{ 'assetscssmobileStyle.cssv='  prepend site.baseurl  append site.github.build_revision }});
+
+		document.getElementsByTagName('head')[0].appendChild(linkElement);
+		
+		changeOnes = false;
+	}
+	else
+	{
+		var linkElement = document.getElementById('mobileStyle');
+		if(linkElement != null)
+		{
+			linkElement.parentNode.removeChild(element);
+			
+			changeOnes = true;
+		}
+	}
+}

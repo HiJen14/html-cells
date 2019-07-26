@@ -1,7 +1,7 @@
 {% assign cellCounter = 0 %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
-  <head>
+  <head onload="Mobile()" onresize="Mobile()">
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -59,24 +59,6 @@
 			{% endfor %}
   	</script>
 	<script type="text/javascript" src={{ "/scripts/scaleCells.js" | prepend: site.baseurl }}></script>
-	<script type="text/javascript">
-		console.log(document.getElementsByTagName("head"));
-		
-		if(IsMobile())
-		{
-			var linkElement = document.createElement('link');
-
-			linkElement.setAttribute('rel', 'stylesheet');
-			linkElement.setAttribute('id', 'mobileStyle');
-			linkElement.setAttribute('href', "{{ '/assets/css/mobileStyle.css?v=' | prepend: site.baseurl | append: site.github.build_revision }}");
-
-			document.getElementsByTagName('head')[0].appendChild(linkElement);
-		}
-		else
-		{
-			var linkElement = document.getElementById('mobileStyle');
-			linkElement.parentNode.removeChild(element);
-		}
-	</script>
+	<script type="text/javascript" src={{ "/scripts/mobile.js" | prepend: site.baseurl }}></script>
   </body>
 </html>
