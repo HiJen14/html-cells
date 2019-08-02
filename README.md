@@ -29,7 +29,7 @@ Cell systems:
 
 2) Cell system for UI in Unity3d (Main Idea) //Not yet started.
 
-<b>C - Could have: (not worrying about that now)
+<b>C - Could have: (not worrying about that now)</b>
 
 3) JavaEE enterprise cell system. 
 
