@@ -15,10 +15,30 @@ And at the same time adding functionaly that is harder to achieve with padding a
 Because grithub pages uses Jeklly this system is showcased using 
 Jeklly.
 
-# TO DO
+# Cell systems
 
- ## Licence
+This is the starting project for the Cell System, proving to myself that it also works for websites.
+
+Cell systems:
+
+<b>M - Must have: (programming that now)</b>
+
+1) Html cells (This project)
+
+<b>S - Should have: (project for soon)</b>
+
+2) Cell system for UI in Unity3d (Main Idea) //Not yet started.
+
+<b>C - Could have: (not worrying about that now)
+
+3) JavaEE enterprise cell system. 
+
+# TO DO
  
  Not yet added: 
  
- - To Do, add licence
+ - Add licence (Think I like Apache 2 licence best.) 
+ - Cell data growth
+ - Mobile implementation finilize
+ 
+ 
